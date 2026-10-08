@@ -30,7 +30,7 @@ public class TokenService(UserManager<User> userManager, IConfiguration config) 
             issuer: null,
             audience: null,
             claims: claims,
-            expires: DateTime.Now.AddDays(1),
+            expires: DateTime.UtcNow.AddMinutes(30),
             signingCredentials: credentials
         );
 
