@@ -7,6 +7,7 @@ using application.Interfaces;
 using application.DTOs.Auth;
 using System.Security.Claims;
 using infrastructure.Data;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace api.Controllers;
 
@@ -54,6 +55,7 @@ public class AuthController(UserManager<User> userManager, SignInManager<User> s
     }
 
     [AllowAnonymous]
+    [EnableRateLimiting ("fixed")]
     [HttpPost("login")] // KOLLA PÅ DETTA
     // [Route("api/login")]
     public async Task<ActionResult> LoginUser(LoginUserDTO model)

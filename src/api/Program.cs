@@ -10,6 +10,7 @@ using infrastructure.Services;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.CodeAnalysis.Options;
+using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -76,6 +77,18 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddCors();
+
+builder.Services.AddRateLimiter (options =>
+{
+    options.AddFixedWindowLimiter("fixed", o =>
+    {
+        o.PermitLimit = 5;
+        o.Window = TimeSpan.FromMinutes(1); 
+        
+    });
+
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+});
 
 var app = builder.Build();
 
@@ -157,5 +170,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseRateLimiter();
 
 app.Run();
