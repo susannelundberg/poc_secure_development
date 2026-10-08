@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Lamineringsmaskin",
+        "price": 1449.90,
+        "imageUrl": "images/lamineringsmaskin.png"
+    },
+    {
+        "name": "Dokumentförstörare",
+        "price": 2339.90,
+        "imageUrl": "images/dokumentforstorare.png"
+    },
+    {
+        "name": "Papperskorg",
+        "price": 49.90,
+        "imageUrl": "images/papperskorg.png"
+    },
+    {
+        "name": "Filofax",
+        "price": 2529.90,
+        "imageUrl": "images/filofax.png"
+    }
+]
