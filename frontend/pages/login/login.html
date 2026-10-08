@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css" />
+    <script type="module" src="login.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Login</h1>
+        <section class="login">
+            <form id="login-form">
+                <div class="form-controls">
+                    <label for="login-email">Email</label>
+                    <input required type="email" name="email" id="login-email" />
+                    <label for="login-password">Password</label>
+                    <input required type="password" name="password" id="login-password" />
+                </div>
+                <button class="btn btn-rounded">Login</button>
+            </form>
+        </section>
+
+        <section class="register">
+            <form id="register-form">
+                <div class="form-controls">
+                    <label for="firstname">First name</label>
+                    <input required type="text" name="firstname" id="firstname" />
+                    <label for="lastname">Lastname</label>
+                    <input required type="text" name="lastname" id="lastname" />
+                    <label for="streetAddress">Street adress</label>
+                    <input required type="text" name="streetAddress" id="streetAddress" />
+                    <label for="postCode">Post code</label>
+                    <input required type="number" name="postCode" id="postCode" />
+                    <label for="city">City</label>
+                    <input required type="text" name="city" id="city" />
+                    <label for="register-email">Email</label>
+                    <input required type="email" name="email" id="register-email" />
+                    <label for="register-password">Password</label>
+                    <input required type="password" name="password" id="register-password" />
+                </div>
+                <button class="btn btn-rounded">Register</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

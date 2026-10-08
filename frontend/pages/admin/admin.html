@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script type="module" src="admin.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h2>Adminpanel</h2>
+
+        <section class="products">
+            <h2>Produkter</h2>
+            <article id="product-list"></article>
+            <form id="update-form" hidden>
+                <div class="form-controls">
+                    <label for="update-name">Produktnamn</label>
+                    <input type="text" name="name" id="update-name">
+                    <label for="update-price">Produktpris</label>
+                    <input type="number" name="price" id="update-price">
+                </div>
+                <button class="btn btn-rounded">Uppdatera produkt</button>
+            </form>
+        </section>
+
+        <section class="addProduct">
+            <form id="add-form">
+                <div class="form-controls">
+                    <label for="add-name">Produktnamn</label>
+                    <input required type="text" name="name" id="add-name" />
+                    <label for="add-price">Produktpris</label>
+                    <input required type="number" name="price" id="add-price" />
+                </div>
+                <button class="btn btn-rounded">Lägg till produkt</button>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
+
